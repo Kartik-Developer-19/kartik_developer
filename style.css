@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: fixed linear-gradient(to bottom right, beige, wheat);
+    padding-top: 2vh;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar  */
+header{
+    position: relative;
+    padding: 10px 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    background: fixed linear-gradient(to right, wheat, beige, wheat);
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+}
+.active{
+    border-bottom: 2px solid #383333;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul .logo{
+    margin: 0px 10px;
+}
+header nav ul .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+/* Main Part  */
+main{
+    width: 100%;
+}
+.main-part{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 5vw;
+}
+.main-part .image img{
+    width: 90%;
+}
+.main-part .text p{
+    width: 80%;
+}
+.main-part .text h1{
+    font-size: 4.5em;
+}
+
+@keyframes typing {
+    0% {
+        width: 0ch;
+    }
+    50% {
+        width: 9ch;
+    }
+    100% {
+        width: 0ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.main-part .text h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.main-part .text h1 .typewriter {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #FFB833;
+    width: 0ch;
+    border-right: 3px solid #FFB833; /* Cursor effect */
+    animation: typing 4s steps(12, end) infinite, blink 0.8s infinite;
+}
+
+/* Cards of Education  */
+.education{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.ed-heading{
+    font-size: 4em;
+    color: #FFB833;
+    text-align: center;
+    margin: 25px 0;
+}
+.education .course{
+    display: flex;
+    flex-direction: column;
+}
+.education .course .heading img{
+    display: inline-block;
+    width: 50px;
+}
+.education .course .heading h2{
+    font-size: 2em;
+    color: #FFB833;
+}
+.education .course .heading{
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    gap: 10px;
+}
+.education .course .front-end-development {
+    border-left: 5px solid #FFB833;
+    padding-left: 10px;
+    margin: 15px 15px;
+}
+.education .course .front-end-development h2, .education .course .front-end-development h3{
+    color: #4e4e4e;
+}
+.education .course .arduino {
+    border-left: 5px solid #FFB833;
+    padding-left: 10px;
+    margin: 15px 15px;
+}
+.education .course .arduino h2, .education .course .arduino h3{
+    color: #4e4e4e;
+}
+.education .course .iot {
+    border-left: 5px solid #FFB833;
+    padding-left: 10px;
+    margin: 15px 15px;
+}
+.education .course .iot h2, .education .course .iot h3{
+    color: #4e4e4e;
+}
+.education .school .heading{
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    gap: 10px;
+}
+.education .school .heading img{
+    display: inline-block;
+    width: 50px;
+}
+.education .school .heading h2{
+    font-size: 2em;
+    color: #FFB833;
+}
+.education .school .school-details{
+    border-left: 5px solid #FFB833;
+    padding-left: 10px;
+    margin: 15px 15px;
+}
+.education  .school h2, .education  .school h3{
+    color: #4e4e4e;
+}
+
+/* Services Container  */
+.services-heading{
+    font-size: 4em;
+    color: #FFB833;
+    text-align: center;
+    margin: 25px 0;
+}
+.services-cont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.services-cont .web, .services-cont .responsive{
+    background: linear-gradient(to bottom right, rgb(255, 199, 126), rgb(255, 165, 55));
+    box-shadow: 2px 2px 5px wheat;
+    width: 65%;
+    margin: 5px auto;
+    border-radius: 25px;
+}
+.web-heading, .responsive-heading{
+    color: #4e4e4e;
+    width: 80%;
+    text-align: center;
+    margin: 5px auto;
+}
+.web-text, .responsive-text{
+    color: #4e4e4e;
+    width: 80%;
+    text-align: center;
+    margin: 5px auto;
+}
+
+/* Projects Container  */
+.projects-heading{
+    font-size: 4em;
+    color: #FFB833;
+    text-align: center;
+    margin: 25px 0;
+}
+.projects-cont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.projects-cont .card{
+    background: linear-gradient(to bottom right, rgb(255, 199, 126), rgb(255, 165, 55));
+    box-shadow: 2px 2px 5px wheat;
+    width: 65%;
+    margin: 15px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+}
+.projects-cont .card img{
+    width: 90%;
+    border-radius: 10px;
+}
+.projects-cont .card h1{
+    font-size: 1.5em;
+    color: #4e4e4e;
+    text-align: center;
+}
+.projects-cont .card p{
+    font-size: 0.9em;
+    width: 80%;
+    color: #4e4e4e;
+    text-align: center;
+}
+
+/* Qualification  */
+.qualification-heading{
+    font-size: 4em;
+    color: #FFB833;
+    text-align: center;
+    margin: 25px 0;
+}
+.qualifications-cont .techathon{
+    background: linear-gradient(to bottom right, rgb(255, 199, 126), rgb(255, 165, 55));
+    box-shadow: 2px 2px 5px wheat;
+    border-radius: 20px;
+    padding: 5px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+}
+.qualifications-cont .techathon .text{
+    margin-left: 20px;
+}
+.qualifications-cont .techathon .text .techathon-heading img{
+    width: 40px;
+}
+.qualifications-cont .techathon .text .techathon-heading h2{
+    color: #4e4e4e;
+    font-size: 1.7em;
+}
+.qualifications-cont .techathon .text .techathon-text{
+    font-size: 0.9em;
+    color: #4e4e4e;
+}
+.qualifications-cont .techathon .text .techathon-heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.qualifications-cont .techathon .image img{
+    border-radius: 10px;
+    margin: 1px auto;
+}
+.qualifications-cont .techathon .image{
+    display: flex;
+    justify-content: center;
+}
+.qualifications-cont .svvv{
+    background: linear-gradient(to bottom right, rgb(255, 199, 126), rgb(255, 165, 55));
+    box-shadow: 2px 2px 5px wheat;
+    border-radius: 20px;
+    padding: 5px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+}
+.qualifications-cont .svvv .text{
+    margin-left: 20px;
+}
+.qualifications-cont .svvv .text .svvv-heading img{
+    width: 40px;
+}
+.qualifications-cont .svvv .text .svvv-heading h2{
+    color: #4e4e4e;
+    font-size: 1.7em;
+}
+.qualifications-cont .svvv .text .svvv-text{
+    font-size: 0.9em;
+    color: #4e4e4e;
+}
+.qualifications-cont .svvv .text .svvv-heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.qualifications-cont .svvv .svvv-image img{
+    border-radius: 10px;
+    margin: 1px auto;
+    width: 90%;
+}
+.qualifications-cont .svvv .svvv-image{
+    display: flex;
+    justify-content: center;
+}
+
+/* Contacts  */
+.contact-heading{
+    font-size: 4em;
+    color: #FFB833;
+    text-align: center;
+    margin-top: 25px;
+}
+.contact-cont .email,
+.contact-cont .address,
+.contact-cont .number,
+.contact-cont .linkedin,
+.contact-cont .github{
+    background: linear-gradient(to bottom right, rgb(255, 199, 126), rgb(255, 165, 55));
+    box-shadow: 2px 2px 5px wheat;
+    border-radius: 20px;
+    padding: 5px 10%;
+    height: fit-content;
+    width: 60%;
+    margin: 10px auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+.contact-cont .email a img,
+.contact-cont .address a img,
+.contact-cont .number a img,
+.contact-cont .linkedin a img,
+.contact-cont .github a img{
+    width: 30px;
+}
+.contact-cont .email h2,
+.contact-cont .address h2,
+.contact-cont .number h2,
+.contact-cont .linkedin h2,
+.contact-cont .github h2{
+    color: #4e4e4e;
+    font-size: 1em;
+}
+
+article{
+    background: linear-gradient(to bottom right, rgb(255, 199, 126), rgb(255, 165, 55));
+    box-shadow: 2px 2px 5px wheat;
+    border-radius: 20px;
+    padding: 5px 10px;
+    height: fit-content;
+    width: 60%;
+    margin: 10px auto;
+    transition: all 1s ease-in 0s;
+}
+article .text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+.back{
+    position: relative;
+    z-index: -100;
+}
+
+/* Responsive  */
+@media (max-width: 700px) {
+    header nav ul .text a{
+        display: none;
+    }
+    header nav ul .text{
+        display: flex;
+        justify-content: end;
+    }
+    header nav ul .text img{
+        display: inline-block;
+    }
+
+    main .main-part{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main .main-part .image img{
+        width: 50%;
+    }
+    main .main-part .image{
+        display: flex;
+        justify-content: center;
+    }
+    main .main-part .text h1{
+        font-size: 3.4em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main .education{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main .services-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main .projects-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main .qualifications-cont .techathon, main .qualifications-cont .svvv{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+
+    footer .contact-heading{
+        line-height: 70px;
+    }
+    footer .contact-cont .email,
+    footer .contact-cont .address,
+    footer .contact-cont .number,
+    footer .contact-cont .linkedin,
+    footer .contact-cont .github{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
